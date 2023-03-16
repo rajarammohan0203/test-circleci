@@ -1,21 +1,11 @@
 version: 2.1
-
 workflows:
-  test-deploy:
+  testing:
     jobs:
-	 - test 
-
+      - runner-test
 jobs:
-  test:
-    docker:
-	 - image: cimg/node:14.13.0
-	steps:
-	
-	 - checkout
-	 - run:
-	     name: install dependencies
-		 command: npm install
-	
-	 - run: 
-	     name: Run Tests
-		 command: npm run test
+  runner-test:
+    machine: true
+    resource_class: rajarammohan0203/self-hosted
+    steps:
+      - run: echo "Hi I'm on Runners!"
