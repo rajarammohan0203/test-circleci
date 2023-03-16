@@ -8,4 +8,4 @@ jobs:
     machine: true
     resource_class: rajarammohan0203/self-hosted
     steps:
-      - run: echo "Hi I'm on Runners and test!"
+      - run: echo "Hi I'm on Runners and test2!"
